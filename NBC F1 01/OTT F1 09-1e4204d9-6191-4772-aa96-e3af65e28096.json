@@ -1,0 +1,561 @@
+{
+  "ChannelId": "1e4204d9-6191-4772-aa96-e3af65e28096",
+  "RunId": "28ccb5e4-0d4a-48c8-8f6c-2fb0047850bc",
+  "ChannelProperties": {
+    "Name": "OTT F1 09",
+    "Description": "",
+    "DefaultSlateURL": "http://smooth-las-akam.istreamplanet.com/live/hls/slate/black.jpg",
+    "ErrorSlateURL": "http://smooth-las-akam.istreamplanet.com/live/hls/slate/black.jpg",
+    "InsertSlateOnAdMarker": false,
+    "InsertSlateOnUPID": {
+      "SegmentUPID": "0",
+      "SegmentUPIDType": 0
+    },
+    "Tags": [
+      "NBCF1"
+    ]
+  },
+  "Ingest": {
+    "Url": "source://nbc_f1_obs_09_primary",
+    "RedundantCVR": true,
+    "SourceStreams": [
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 Video' or StreamTypeName='H.264']",
+        "StreamIndex": 0,
+        "Type": "Video"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 0,
+        "Type": "Audio"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 1,
+        "Type": "Audio"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 3,
+        "Type": "Audio"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 2,
+        "Type": "Audio"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 5,
+        "Type": "Audio"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 4,
+        "Type": "Audio"
+      }
+    ],
+    "ProgramIndex": 0,
+    "IgnoreSurroundAudio": false,
+    "CEA708ClosedCaptions": true,
+    "SourcePTSPassthrough": false,
+    "SCTE35CommandTypes": [
+      "SpliceInsert"
+    ],
+    "SCTE35SegmentTypes": [
+      "Ad"
+    ],
+    "IngestSCTE35": true,
+    "HonorSCTE35WebDeliveryFlag": true
+  },
+  "Encode": {
+    "CodecConfigs": [
+      {
+        "VideoCodec": "H.264",
+        "H264Level": 40,
+        "H264Profile": "HIGH",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 4,
+        "NumBFrames": 3,
+        "Type": "Video"
+      },
+      {
+        "VideoCodec": "H.264",
+        "H264Level": 31,
+        "H264Profile": "MAIN",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 4,
+        "NumBFrames": 3,
+        "Type": "Video"
+      },
+      {
+        "VideoCodec": "H.264",
+        "H264Level": 30,
+        "H264Profile": "BASELINE",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 3,
+        "NumBFrames": 0,
+        "Type": "Video"
+      },
+      {
+        "AudioCodec": "AAC",
+        "HeAac": 0,
+        "MpegVersion": "MPEG4_AAC_AUDIO",
+        "AacHeaderType": "AAC_HEADER_ADTS",
+        "Type": "Audio"
+      }
+    ],
+    "ElementaryStreams": [
+      {
+        "Width": 1920,
+        "Height": 1080,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 5500000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 0
+      },
+      {
+        "Width": 1280,
+        "Height": 720,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 4000000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 1024,
+        "Height": 576,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 2200000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 768,
+        "Height": 432,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 1400000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 640,
+        "Height": 360,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 900000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 512,
+        "Height": 288,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 600000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 384,
+        "Height": 216,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 300000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Channels": 2,
+        "SampleRate": 44100,
+        "Language": "tur",
+        "Name": "Audio_64kbps_44100Hz_stereo",
+        "Type": "Audio",
+        "BitRate": 64000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 0
+      },
+      {
+        "Channels": 2,
+        "SampleRate": 44100,
+        "Language": "eng",
+        "Name": "Audio_64kbps_44100Hz_stereo",
+        "Type": "Audio",
+        "BitRate": 64000,
+        "SourceStreamIndex": 1,
+        "CodecConfigIndex": 0
+      },
+      {
+        "Channels": 2,
+        "SampleRate": 44100,
+        "Language": "fre",
+        "Name": "Audio_64kbps_44100Hz_stereo",
+        "Type": "Audio",
+        "BitRate": 64000,
+        "SourceStreamIndex": 2,
+        "CodecConfigIndex": 0
+      },
+      {
+        "Channels": 2,
+        "SampleRate": 44100,
+        "Language": "ger",
+        "Name": "Audio_64kbps_44100Hz_stereo",
+        "Type": "Audio",
+        "BitRate": 64000,
+        "SourceStreamIndex": 3,
+        "CodecConfigIndex": 0
+      },
+      {
+        "Channels": 2,
+        "SampleRate": 44100,
+        "Language": "dut",
+        "Name": "Audio_64kbps_44100Hz_stereo",
+        "Type": "Audio",
+        "BitRate": 64000,
+        "SourceStreamIndex": 4,
+        "CodecConfigIndex": 0
+      },
+      {
+        "Channels": 2,
+        "SampleRate": 44100,
+        "Language": "spa",
+        "Name": "Audio_64kbps_44100Hz_stereo",
+        "Type": "Audio",
+        "BitRate": 64000,
+        "SourceStreamIndex": 5,
+        "CodecConfigIndex": 0
+      }
+    ]
+  },
+  "Package": {
+    "StreamPackages": [
+      {
+        "Parameters": {
+          "FormatVersion": 4,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "IndependentRenditions": "dependent",
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1
+          },
+          {
+            "VideoStreamIndex": 2
+          },
+          {
+            "VideoStreamIndex": 3
+          },
+          {
+            "VideoStreamIndex": 4
+          },
+          {
+            "VideoStreamIndex": 5
+          },
+          {
+            "VideoStreamIndex": 6
+          },
+          {
+            "Name": "TeamRadio",
+            "AudioStreamIndex": 0
+          },
+          {
+            "Name": "English",
+            "AudioStreamIndex": 1
+          },
+          {
+            "Name": "Francais",
+            "AudioStreamIndex": 2
+          },
+          {
+            "Name": "Deutsch",
+            "AudioStreamIndex": 3
+          },
+          {
+            "Name": "Nederlands",
+            "AudioStreamIndex": 4
+          },
+          {
+            "Name": "Espanol",
+            "AudioStreamIndex": 5
+          },
+          {
+            "Name": "English",
+            "Type": "ClosedCaption",
+            "Language": "en"
+          },
+          {
+            "Name": "Francais",
+            "Type": "ClosedCaption",
+            "Language": "fr"
+          },
+          {
+            "Name": "Espanol",
+            "Type": "ClosedCaption",
+            "Language": "es"
+          }
+        ],
+        "PartialPresentations": [],
+        "PublishingPointRedundancy": true
+      },
+      {
+        "Parameters": {
+          "FormatVersion": 4,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "IndependentRenditions": "dependent",
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1
+          },
+          {
+            "VideoStreamIndex": 2
+          },
+          {
+            "VideoStreamIndex": 3
+          },
+          {
+            "VideoStreamIndex": 4
+          },
+          {
+            "VideoStreamIndex": 5
+          },
+          {
+            "VideoStreamIndex": 6
+          },
+          {
+            "Name": "TeamRadio",
+            "AudioStreamIndex": 0
+          },
+          {
+            "Name": "English",
+            "AudioStreamIndex": 1
+          },
+          {
+            "Name": "Francais",
+            "AudioStreamIndex": 2
+          },
+          {
+            "Name": "Deutsch",
+            "AudioStreamIndex": 3
+          },
+          {
+            "Name": "Nederlands",
+            "AudioStreamIndex": 4
+          },
+          {
+            "Name": "Espanol",
+            "AudioStreamIndex": 5
+          },
+          {
+            "Name": "English",
+            "Type": "ClosedCaption",
+            "Language": "en"
+          },
+          {
+            "Name": "Francais",
+            "Type": "ClosedCaption",
+            "Language": "fr"
+          },
+          {
+            "Name": "Espanol",
+            "Type": "ClosedCaption",
+            "Language": "es"
+          }
+        ],
+        "PartialPresentations": [],
+        "PublishingPointRedundancy": false
+      }
+    ]
+  },
+  "Publish": {
+    "PublishingPoints": [
+      {
+        "PublishPointId": "f1tv-primary",
+        "Url": "http://f109@nbcsports.origin.istreamplanet.net/live/40718071411",
+        "OriginalUrl": "http://f109@nbcsports.origin.istreamplanet.net/live/40718071411",
+        "GeneratedBasePublishUrl": "http://f109@nbcsports.origin.istreamplanet.net/live/40718071411",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "https://f1tv-cdn-cent-west.formula1.com/live/40718071411",
+        "PlaybackUrl": "https://f1tv-cdn-cent-west.formula1.com/live/40718071411/master.m3u8",
+        "CrossPublishPaths": [],
+        "StreamPackageIndex": 0,
+        "RedundantPublishing": true,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "f1tv-secondary",
+        "Url": "http://f109@nbcsports-east.origin.istreamplanet.net/live/40718071411",
+        "OriginalUrl": "http://f109@nbcsports-east.origin.istreamplanet.net/live/40718071411",
+        "GeneratedBasePublishUrl": "http://f109@nbcsports-east.origin.istreamplanet.net/live/40718071411",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "https://f1tv-cdn-cent-east.formula1.com/live/40718071411",
+        "PlaybackUrl": "https://f1tv-cdn-cent-east.formula1.com/live/40718071411/master.m3u8",
+        "CrossPublishPaths": [],
+        "StreamPackageIndex": 0,
+        "RedundantPublishing": true,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "live2vod",
+        "Url": "http://pubpoint.vod.istreamplanet.com/event/3/2/40718071411/1",
+        "OriginalUrl": "http://pubpoint.vod.istreamplanet.com/event/3/2/40718071411/1",
+        "GeneratedBasePublishUrl": "http://pubpoint.vod.istreamplanet.com/event/3/2/40718071411/1",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://pubpoint.vod.istreamplanet.com/event/3/2/40718071411/1",
+        "PlaybackUrl": "http://pubpoint.vod.istreamplanet.com/event/3/2/40718071411/1/master.m3u8",
+        "CrossPublishPaths": [],
+        "StreamPackageIndex": 1,
+        "RedundantPublishing": true,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      }
+    ]
+  },
+  "RetryCount": 0,
+  "IsDebugEnabled": false,
+  "IsPrimeTimeCustomer": true,
+  "CollectTrace": false,
+  "Status": "OffAir",
+  "Health": "Normal",
+  "LastStartTime": "2019-07-18T14:39:54.896Z",
+  "ServicesConfiguration": {
+    "AudioTranscoder": {},
+    "FragmentedMp4Capture": {},
+    "Global": {
+      "UseSegmentStore2": false
+    },
+    "HdsPublish": {},
+    "HlsPublish": {},
+    "HssPublish": {},
+    "LiveCaption": {},
+    "MulticastIngest": {
+      "EnableRTPPIDFiltering": false
+    },
+    "RtmpCapture": {},
+    "RtmpWriter": {},
+    "SegmentStore": {},
+    "VideoTranscoder": {
+      "DecoderVendor": "MainConcept",
+      "DenoiseLevel": 0,
+      "RealTimeTranscodeAlertWindow": 60000,
+      "SlowTranscodeWarningPct": 5,
+      "SlowTranscodeErrorPct": 10
+    },
+    "Metrics": {
+      "Brokers": "10.5.39.17,10.5.40.29,10.5.41.20",
+      "Topic": "prod.metrics",
+      "Tags": {
+        "feed_name": "nbc_f1_obs_09_primary",
+        "aventus_channel_name": "ott-f1-09",
+        "provider": "unknown",
+        "distributor": "nbcf1",
+        "environment": "prod",
+        "region": "vegas",
+        "source_origin": "cvr",
+        "scale_unit_id": "las-157-166-151-41.istreamplanet.com",
+        "combined": "ott-f1-09/unknown/nbcf1/nbc_f1_obs_09_primary"
+      }
+    },
+    "ChannelTimeline": {
+      "ProcessScte35": true
+    }
+  },
+  "SendEndOfCaptions": false,
+  "Kill": false,
+  "IsDeleted": false,
+  "Id": "1e4204d9-6191-4772-aa96-e3af65e28096",
+  "ETag": "15b2c7d0-51a6-4cee-80d1-b2557e120971",
+  "Tag": "68e782c0-1606-48a0-bfec-98fb0af78dcf",
+  "CreatedTime": "2019-05-28T18:40:49.436Z",
+  "LastUpdateTime": "2019-07-18T16:02:02.141Z",
+  "TimeElapsedSince": "6.17:07:01.8597131",
+  "Version": "7.9.30945.1"
+}
