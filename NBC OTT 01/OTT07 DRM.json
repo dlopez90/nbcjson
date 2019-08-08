@@ -1,0 +1,987 @@
+{
+  "ChannelId": "8d3cd20f-ba7d-47c1-8061-5b14d8099349",
+  "RunId": "804a1ca4-91f8-4f6c-bd64-f557f4ffc176",
+  "ChannelProperties": {
+    "Name": "OTT07 DRM",
+    "Description": "",
+    "DefaultSlateURL": "http://smooth-las-akam.istreamplanet.com/live/hls/slate/black.jpg",
+    "ErrorSlateURL": "http://smooth-las-akam.istreamplanet.com/live/hls/slate/black.jpg",
+    "InsertSlateOnAdMarker": false,
+    "InsertSlateOnUPID": {
+      "SegmentUPID": "0",
+      "SegmentUPIDType": 0
+    },
+    "Tags": [
+      "NBCSports"
+    ]
+  },
+  "Ingest": {
+    "Url": "source://nbc07_primary",
+    "RedundantCVR": true,
+    "SourceStreams": [
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 Video' or StreamTypeName='H.264']",
+        "StreamIndex": 0,
+        "Type": "Video"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 0,
+        "Type": "Audio"
+      }
+    ],
+    "ProgramIndex": 0,
+    "IgnoreSurroundAudio": false,
+    "CEA708ClosedCaptions": true,
+    "SourcePTSPassthrough": false,
+    "SCTE35CommandTypes": [
+      "SpliceInsert"
+    ],
+    "SCTE35SegmentTypes": [
+      "Ad"
+    ],
+    "IngestSCTE35": true,
+    "HonorSCTE35WebDeliveryFlag": true
+  },
+  "Encode": {
+    "CodecConfigs": [
+      {
+        "VideoCodec": "H.264",
+        "H264Level": 40,
+        "H264Profile": "HIGH",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 4,
+        "NumBFrames": 3,
+        "Type": "Video"
+      },
+      {
+        "VideoCodec": "H.264",
+        "H264Level": 31,
+        "H264Profile": "MAIN",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 4,
+        "NumBFrames": 3,
+        "Type": "Video"
+      },
+      {
+        "VideoCodec": "H.264",
+        "H264Level": 30,
+        "H264Profile": "BASELINE",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 3,
+        "NumBFrames": 0,
+        "Type": "Video"
+      },
+      {
+        "AudioCodec": "AAC",
+        "HeAac": 0,
+        "MpegVersion": "MPEG4_AAC_AUDIO",
+        "AacHeaderType": "AAC_HEADER_ADTS",
+        "Type": "Audio"
+      }
+    ],
+    "ElementaryStreams": [
+      {
+        "Width": 1920,
+        "Height": 1080,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 5500000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 0
+      },
+      {
+        "Width": 1280,
+        "Height": 720,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 4000000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 1024,
+        "Height": 576,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 2200000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 768,
+        "Height": 432,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 1400000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 640,
+        "Height": 360,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 900000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 512,
+        "Height": 288,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 600000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 384,
+        "Height": 216,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 300000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Channels": 2,
+        "SampleRate": 44100,
+        "Language": "ENG",
+        "Name": "Audio_64kbps_44100Hz_stereo",
+        "Type": "Audio",
+        "BitRate": 64000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 0
+      }
+    ]
+  },
+  "Package": {
+    "StreamPackages": [
+      {
+        "Parameters": {
+          "FormatVersion": 3,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "DisableAudioOnly": true,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "IndependentRenditions": "dependent",
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 2,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 3,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 4,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 5,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 6,
+            "AudioStreamIndex": 0
+          }
+        ],
+        "PartialPresentations": [
+          {
+            "PartialPresentationName": "tve",
+            "ExcludedRenditions": [],
+            "IncludedMediaStreamPackages": [
+              {
+                "MediaStreamIndex": 0
+              },
+              {
+                "MediaStreamIndex": 1
+              },
+              {
+                "MediaStreamIndex": 2
+              },
+              {
+                "MediaStreamIndex": 3
+              },
+              {
+                "MediaStreamIndex": 4
+              },
+              {
+                "MediaStreamIndex": 5
+              }
+            ]
+          }
+        ],
+        "Encryption": {
+          "AssetID": "9b2026a0-1d57-4cc8-aa25-27f30c330c00",
+          "CompanyID": "263b65d9-0c1f-4246-9b3f-0b500ed8c794",
+          "KeyServerURL": "https://keyservice.license.istreamplanet.com/keyservice",
+          "FairPlay": {
+            "LicenseServerURL": "skd://fairplay.license.istreamplanet.com:443/"
+          },
+          "PrimeTime": {
+            "LicenseServerURL": "http://primetime.license.istreamplanet.com/"
+          },
+          "Widevine": {},
+          "KeyRotationPeriod": 0,
+          "Format": "SampleAES"
+        },
+        "PublishingPointRedundancy": true
+      },
+      {
+        "Parameters": {
+          "FormatVersion": 3,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "DisableAudioOnly": true,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "IndependentRenditions": "dependent",
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 2,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 3,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 4,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 5,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 6,
+            "AudioStreamIndex": 0
+          }
+        ],
+        "PartialPresentations": [
+          {
+            "PartialPresentationName": "tve",
+            "ExcludedRenditions": [],
+            "IncludedMediaStreamPackages": [
+              {
+                "MediaStreamIndex": 0
+              },
+              {
+                "MediaStreamIndex": 1
+              },
+              {
+                "MediaStreamIndex": 2
+              },
+              {
+                "MediaStreamIndex": 3
+              },
+              {
+                "MediaStreamIndex": 4
+              },
+              {
+                "MediaStreamIndex": 5
+              }
+            ]
+          }
+        ],
+        "Encryption": {
+          "AssetID": "8adbd500-99b8-43ab-ae29-8bab159a8029",
+          "CompanyID": "263b65d9-0c1f-4246-9b3f-0b500ed8c794",
+          "KeyServerURL": "https://keyservice.license.istreamplanet.com/keyservice",
+          "FairPlay": {
+            "LicenseServerURL": "skd://fairplay.license.istreamplanet.com:443/"
+          },
+          "PrimeTime": {
+            "LicenseServerURL": "http://primetime.license.istreamplanet.com/"
+          },
+          "Widevine": {},
+          "KeyRotationPeriod": 0,
+          "Format": "SampleAES"
+        },
+        "PublishingPointRedundancy": true
+      },
+      {
+        "Parameters": {
+          "FormatVersion": 3,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "DisableAudioOnly": true,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 2,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 3,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 4,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 5,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 6,
+            "AudioStreamIndex": 0
+          }
+        ],
+        "PartialPresentations": [],
+        "Encryption": {
+          "AssetID": "680da2d6-284d-4e72-aa9c-2588f0d47851",
+          "CompanyID": "263b65d9-0c1f-4246-9b3f-0b500ed8c794",
+          "KeyServerURL": "https://keyservice.license.istreamplanet.com/keyservice",
+          "FairPlay": {
+            "LicenseServerURL": "skd://fairplay.license.istreamplanet.com:443/"
+          },
+          "PrimeTime": {
+            "LicenseServerURL": "http://primetime.license.istreamplanet.com/"
+          },
+          "Widevine": {},
+          "KeyRotationPeriod": 0,
+          "Format": "SampleAES"
+        },
+        "PublishingPointRedundancy": true
+      },
+      {
+        "Parameters": {
+          "FormatVersion": 3,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "DisableAudioOnly": true,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 2,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 3,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 4,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 5,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 6,
+            "AudioStreamIndex": 0
+          }
+        ],
+        "PartialPresentations": [
+          {
+            "PartialPresentationName": "tve",
+            "ExcludedRenditions": [],
+            "IncludedMediaStreamPackages": [
+              {
+                "MediaStreamIndex": 0
+              },
+              {
+                "MediaStreamIndex": 1
+              },
+              {
+                "MediaStreamIndex": 2
+              },
+              {
+                "MediaStreamIndex": 3
+              },
+              {
+                "MediaStreamIndex": 4
+              },
+              {
+                "MediaStreamIndex": 5
+              }
+            ]
+          }
+        ],
+        "Encryption": {
+          "AssetID": "d39cf660-df94-4ba3-9b60-4f7290b3a7d1",
+          "CompanyID": "263b65d9-0c1f-4246-9b3f-0b500ed8c794",
+          "KeyServerURL": "https://keyservice.license.istreamplanet.com/keyservice",
+          "FairPlay": {
+            "LicenseServerURL": "skd://fairplay.license.istreamplanet.com:443/"
+          },
+          "PrimeTime": {
+            "LicenseServerURL": "http://primetime.license.istreamplanet.com/"
+          },
+          "Widevine": {},
+          "KeyRotationPeriod": 0,
+          "Format": "SampleAES"
+        },
+        "PublishingPointRedundancy": false
+      },
+      {
+        "Parameters": {
+          "FormatVersion": 3,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "DisableAudioOnly": true,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 2,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 3,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 4,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 5,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 6,
+            "AudioStreamIndex": 0
+          }
+        ],
+        "PartialPresentations": [
+          {
+            "PartialPresentationName": "tve",
+            "ExcludedRenditions": [],
+            "IncludedMediaStreamPackages": [
+              {
+                "MediaStreamIndex": 0
+              },
+              {
+                "MediaStreamIndex": 1
+              },
+              {
+                "MediaStreamIndex": 2
+              },
+              {
+                "MediaStreamIndex": 3
+              },
+              {
+                "MediaStreamIndex": 4
+              },
+              {
+                "MediaStreamIndex": 5
+              }
+            ]
+          }
+        ],
+        "Encryption": {
+          "AssetID": "fdb8c7ca-f853-4814-adc3-104ba33f5e7a",
+          "CompanyID": "263b65d9-0c1f-4246-9b3f-0b500ed8c794",
+          "KeyServerURL": "https://keyservice.license.istreamplanet.com/keyservice",
+          "FairPlay": {
+            "LicenseServerURL": "skd://fairplay.license.istreamplanet.com:443/"
+          },
+          "PrimeTime": {
+            "LicenseServerURL": "http://primetime.license.istreamplanet.com/"
+          },
+          "Widevine": {},
+          "KeyRotationPeriod": 0,
+          "Format": "SampleAES"
+        },
+        "PublishingPointRedundancy": false
+      },
+      {
+        "Parameters": {
+          "FormatVersion": 3,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "DisableAudioOnly": true,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "IndependentRenditions": "dependent",
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 2,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 3,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 4,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 5,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 6,
+            "AudioStreamIndex": 0
+          }
+        ],
+        "PartialPresentations": [
+          {
+            "PartialPresentationName": "tve",
+            "ExcludedRenditions": [],
+            "IncludedMediaStreamPackages": [
+              {
+                "MediaStreamIndex": 0
+              },
+              {
+                "MediaStreamIndex": 1
+              },
+              {
+                "MediaStreamIndex": 2
+              },
+              {
+                "MediaStreamIndex": 3
+              },
+              {
+                "MediaStreamIndex": 4
+              },
+              {
+                "MediaStreamIndex": 5
+              }
+            ]
+          }
+        ],
+        "Encryption": {
+          "IVRotationMethod": "RandomPerSegment",
+          "KeyDownloadURL": "{key_id}.key",
+          "KeyUploadURL": "http://post.sprtott7-i.akamaihd.net/222325/bryce-test0724080123/snappy/{key_id}.key|http://127.0.0.1:9090/p-ep586269.i.akamaientrypoint.net/586269/bryce-test0724080123/snappy/{key_id}.key",
+          "KeyRotationPeriod": 300,
+          "UserName": "isp-sprtdrm",
+          "Password": "t6E74DLQmMji8Hz5",
+          "Format": "AES128CBC"
+        },
+        "PublishingPointRedundancy": true
+      }
+    ]
+  },
+  "Publish": {
+    "PublishingPoints": [
+      {
+        "PublishPointId": "msl3-primary",
+        "Url": "http://post.sprtott7-i.akamaihd.net/222325/bryce-test0724080123",
+        "OriginalUrl": "http://post.sprtott7-i.akamaihd.net/222325/bryce-test0724080123",
+        "GeneratedBasePublishUrl": "http://post.sprtott7-i.akamaihd.net/222325/bryce-test0724080123",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://sprtott7-i.akamaihd.net/hls/live/222325/bryce-test0724080123",
+        "PlaybackUrl": "http://sprtott7-i.akamaihd.net/hls/live/222325/bryce-test0724080123/master.m3u8",
+        "StreamPackageIndex": 0,
+        "RedundantPublishing": false,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "msl4-primary",
+        "Url": "http://127.0.0.1:9090/p-ep586269.i.akamaientrypoint.net/586269/bryce-test0724080123",
+        "OriginalUrl": "http://127.0.0.1:9090/p-ep586269.i.akamaientrypoint.net/586269/bryce-test0724080123",
+        "GeneratedBasePublishUrl": "http://127.0.0.1:9090/p-ep586269.i.akamaientrypoint.net/586269/bryce-test0724080123",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://sprtlive7.akamaized.net/hls/live/586269/bryce-test0724080123",
+        "PlaybackUrl": "http://sprtlive7.akamaized.net/hls/live/586269/bryce-test0724080123/master.m3u8",
+        "StreamPackageIndex": 1,
+        "RedundantPublishing": false,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "ispawsorigin-primary",
+        "Url": "http://ott07@nbcsports.origin.istreamplanet.net/live/bryce-test0724080123",
+        "OriginalUrl": "http://ott07@nbcsports.origin.istreamplanet.net/live/bryce-test0724080123",
+        "GeneratedBasePublishUrl": "http://ott07@nbcsports.origin.istreamplanet.net/live/bryce-test0724080123",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://west.sprtlive.akamaized.net/live/bryce-test0724080123",
+        "PlaybackUrl": "http://west.sprtlive.akamaized.net/live/bryce-test0724080123/master.m3u8",
+        "CrossPublishPaths": [
+          ""
+        ],
+        "StreamPackageIndex": 2,
+        "RedundantPublishing": true,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 60,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "ispawsorigin-secondary",
+        "Url": "http://ott07@nbcsports-east.origin.istreamplanet.net/live/bryce-test0724080123",
+        "OriginalUrl": "http://ott07@nbcsports-east.origin.istreamplanet.net/live/bryce-test0724080123",
+        "GeneratedBasePublishUrl": "http://ott07@nbcsports-east.origin.istreamplanet.net/live/bryce-test0724080123",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://east.sprtlive.akamaized.net/live/bryce-test0724080123",
+        "PlaybackUrl": "http://east.sprtlive.akamaized.net/live/bryce-test0724080123/master.m3u8",
+        "CrossPublishPaths": [
+          ""
+        ],
+        "StreamPackageIndex": 2,
+        "RedundantPublishing": true,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 60,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "centurylink-primary",
+        "Url": "http://ott07@nbcuni.origin.istreamplanet.net/live/bryce-test0724080123",
+        "OriginalUrl": "http://ott07@nbcuni.origin.istreamplanet.net/live/bryce-test0724080123",
+        "GeneratedBasePublishUrl": "http://ott07@nbcuni.origin.istreamplanet.net/live/bryce-test0724080123",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://ctl-west.stream.telemundodeportes.com/live/bryce-test0724080123",
+        "PlaybackUrl": "http://ctl-west.stream.telemundodeportes.com/live/bryce-test0724080123/master.m3u8",
+        "StreamPackageIndex": 3,
+        "RedundantPublishing": true,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 60,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "centurylink-secondary",
+        "Url": "http://ott07@nbcuni-east.origin.istreamplanet.net/live/bryce-test0724080123",
+        "OriginalUrl": "http://ott07@nbcuni-east.origin.istreamplanet.net/live/bryce-test0724080123",
+        "GeneratedBasePublishUrl": "http://ott07@nbcuni-east.origin.istreamplanet.net/live/bryce-test0724080123",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://ctl-east.stream.telemundodeportes.com/live/bryce-test0724080123",
+        "PlaybackUrl": "http://ctl-east.stream.telemundodeportes.com/live/bryce-test0724080123/master.m3u8",
+        "StreamPackageIndex": 3,
+        "RedundantPublishing": true,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 60,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "live2vod",
+        "Url": "http://pubpoint.vod.istreamplanet.com/event/3/1/bryce-test0724080123/1",
+        "OriginalUrl": "http://pubpoint.vod.istreamplanet.com/event/3/1/bryce-test0724080123/1",
+        "GeneratedBasePublishUrl": "http://pubpoint.vod.istreamplanet.com/event/3/1/bryce-test0724080123/1",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://pubpoint.vod.istreamplanet.com/event/3/1/bryce-test0724080123/1",
+        "PlaybackUrl": "http://pubpoint.vod.istreamplanet.com/event/3/1/bryce-test0724080123/1/master.m3u8",
+        "CrossPublishPaths": [
+          ""
+        ],
+        "StreamPackageIndex": 4,
+        "RedundantPublishing": false,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "snappy-msl3-primary",
+        "Url": "http://post.sprtott7-i.akamaihd.net/222325/bryce-test0724080123/snappy",
+        "OriginalUrl": "http://post.sprtott7-i.akamaihd.net/222325/bryce-test0724080123/snappy",
+        "GeneratedBasePublishUrl": "http://post.sprtott7-i.akamaihd.net/222325/bryce-test0724080123/snappy",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://sprtott7-i.akamaihd.net/hls/live/222325/bryce-test0724080123/snappy",
+        "PlaybackUrl": "http://sprtott7-i.akamaihd.net/hls/live/222325/bryce-test0724080123/snappy/master.m3u8",
+        "StreamPackageIndex": 5,
+        "RedundantPublishing": false,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "snappy-msl4-primary",
+        "Url": "http://127.0.0.1:9090/p-ep586269.i.akamaientrypoint.net/586269/bryce-test0724080123/snappy",
+        "OriginalUrl": "http://127.0.0.1:9090/p-ep586269.i.akamaientrypoint.net/586269/bryce-test0724080123/snappy",
+        "GeneratedBasePublishUrl": "http://127.0.0.1:9090/p-ep586269.i.akamaientrypoint.net/586269/bryce-test0724080123/snappy",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://sprtlive7.akamaized.net/hls/live/586269/bryce-test0724080123/snappy",
+        "PlaybackUrl": "http://sprtlive7.akamaized.net/hls/live/586269/bryce-test0724080123/snappy/master.m3u8",
+        "StreamPackageIndex": 5,
+        "RedundantPublishing": false,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      }
+    ]
+  },
+  "RetryCount": 0,
+  "IsDebugEnabled": false,
+  "IsPrimeTimeCustomer": true,
+  "CollectTrace": false,
+  "Status": "OffAir",
+  "Health": "Critical",
+  "LastStartTime": "2019-07-24T15:02:22.911Z",
+  "ServicesConfiguration": {
+    "AudioTranscoder": {},
+    "FragmentedMp4Capture": {},
+    "Global": {
+      "UseSegmentStore2": false
+    },
+    "HdsPublish": {},
+    "HlsPublish": {},
+    "HssPublish": {},
+    "LiveCaption": {},
+    "MulticastIngest": {
+      "EnableRTPPIDFiltering": false
+    },
+    "RtmpCapture": {},
+    "RtmpWriter": {},
+    "SegmentStore": {},
+    "VideoTranscoder": {
+      "DecoderVendor": "MainConcept",
+      "DenoiseLevel": 0,
+      "RealTimeTranscodeAlertWindow": 60000,
+      "SlowTranscodeWarningPct": 5,
+      "SlowTranscodeErrorPct": 10
+    },
+    "Metrics": {
+      "Brokers": "10.5.39.17,10.5.40.29,10.5.41.20",
+      "Topic": "prod.metrics",
+      "Tags": {
+        "feed_name": "nbc33_primary",
+        "aventus_channel_name": "ott07-drm",
+        "provider": "unknown",
+        "distributor": "nbcsports",
+        "environment": "prod",
+        "region": "vegas",
+        "source_origin": "cvr",
+        "scale_unit_id": "las-157-166-151-40.istreamplanet.com",
+        "combined": "ott07-drm/unknown/nbcsports/nbc33_primary"
+      }
+    },
+    "ChannelTimeline": {
+      "ProcessScte35": true
+    }
+  },
+  "SendEndOfCaptions": false,
+  "Kill": false,
+  "IsDeleted": false,
+  "Id": "8d3cd20f-ba7d-47c1-8061-5b14d8099349",
+  "ETag": "80a2fab6-7bfe-48a5-8a68-460b1f0eb00a",
+  "Tag": "e9d9be90-59f3-4389-a2ec-dcb8ebfb1515",
+  "CreatedTime": "2018-11-09T10:58:38.724Z",
+  "LastUpdateTime": "2019-07-24T16:56:59.33Z",
+  "TimeElapsedSince": "16:11:48.4007262",
+  "Version": "7.9.30945.1"
+}
