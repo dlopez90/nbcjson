@@ -1,0 +1,859 @@
+{
+  "ChannelId": "cf10c72e-d692-49a1-a014-791ef1e4796d",
+  "RunId": "56785dc6-e23f-4db0-b088-b3616f2d4e25",
+  "ChannelProperties": {
+    "Name": "NBCNEWS3",
+    "Description": "",
+    "DefaultSlateURL": "http://smooth-las-akam.istreamplanet.com/live/hls/slate/black.jpg",
+    "ErrorSlateURL": "http://smooth-las-akam.istreamplanet.com/live/hls/slate/black.jpg",
+    "InsertSlateOnAdMarker": false,
+    "InsertSlateOnUPID": {
+      "SegmentUPID": "0",
+      "SegmentUPIDType": 0
+    },
+    "Tags": [
+      "NBCSports"
+    ]
+  },
+  "Ingest": {
+    "Url": "source://nbc_news2_primary",
+    "RedundantCVR": true,
+    "SourceStreams": [
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 Video' or StreamTypeName='H.264']",
+        "StreamIndex": 0,
+        "Type": "Video"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 0,
+        "Type": "Audio"
+      }
+    ],
+    "ProgramIndex": 0,
+    "IgnoreSurroundAudio": false,
+    "CEA708ClosedCaptions": true,
+    "SourcePTSPassthrough": false,
+    "SCTE35CommandTypes": [
+      "SpliceInsert"
+    ],
+    "SCTE35SegmentTypes": [
+      "Ad"
+    ],
+    "IngestSCTE35": true,
+    "HonorSCTE35WebDeliveryFlag": true
+  },
+  "Encode": {
+    "CodecConfigs": [
+      {
+        "VideoCodec": "H.264",
+        "H264Level": 40,
+        "H264Profile": "HIGH",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 4,
+        "NumBFrames": 3,
+        "Type": "Video"
+      },
+      {
+        "VideoCodec": "H.264",
+        "H264Level": 31,
+        "H264Profile": "MAIN",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 4,
+        "NumBFrames": 3,
+        "Type": "Video"
+      },
+      {
+        "VideoCodec": "H.264",
+        "H264Level": 30,
+        "H264Profile": "BASELINE",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 3,
+        "NumBFrames": 0,
+        "Type": "Video"
+      },
+      {
+        "AudioCodec": "AAC",
+        "HeAac": 0,
+        "MpegVersion": "MPEG4_AAC_AUDIO",
+        "AacHeaderType": "AAC_HEADER_ADTS",
+        "Type": "Audio"
+      }
+    ],
+    "ElementaryStreams": [
+      {
+        "Width": 1920,
+        "Height": 1080,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 5500000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 0
+      },
+      {
+        "Width": 1280,
+        "Height": 720,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 4000000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 1024,
+        "Height": 576,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 2200000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 768,
+        "Height": 432,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 1400000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 640,
+        "Height": 360,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 900000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 512,
+        "Height": 288,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 600000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 384,
+        "Height": 216,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "",
+        "Type": "Video",
+        "BitRate": 300000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Channels": 2,
+        "SampleRate": 44100,
+        "Language": "ENG",
+        "Name": "Audio_64kbps_44100Hz_stereo",
+        "Type": "Audio",
+        "BitRate": 64000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 0
+      }
+    ]
+  },
+  "Package": {
+    "StreamPackages": [
+      {
+        "Parameters": {
+          "FormatVersion": 3,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "DisableAudioOnly": true,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "IndependentRenditions": "dependent",
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 2,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 3,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 4,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 5,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 6,
+            "AudioStreamIndex": 0
+          }
+        ],
+        "PartialPresentations": [
+          {
+            "PartialPresentationName": "tve",
+            "ExcludedRenditions": [],
+            "IncludedMediaStreamPackages": [
+              {
+                "MediaStreamIndex": 0
+              },
+              {
+                "MediaStreamIndex": 1
+              },
+              {
+                "MediaStreamIndex": 2
+              },
+              {
+                "MediaStreamIndex": 3
+              },
+              {
+                "MediaStreamIndex": 4
+              },
+              {
+                "MediaStreamIndex": 5
+              }
+            ]
+          }
+        ],
+        "PublishingPointRedundancy": true
+      },
+      {
+        "Parameters": {
+          "FormatVersion": 3,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "DisableAudioOnly": true,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "IndependentRenditions": "dependent",
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 2,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 3,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 4,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 5,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 6,
+            "AudioStreamIndex": 0
+          }
+        ],
+        "PartialPresentations": [
+          {
+            "PartialPresentationName": "tve",
+            "ExcludedRenditions": [],
+            "IncludedMediaStreamPackages": [
+              {
+                "MediaStreamIndex": 0
+              },
+              {
+                "MediaStreamIndex": 1
+              },
+              {
+                "MediaStreamIndex": 2
+              },
+              {
+                "MediaStreamIndex": 3
+              },
+              {
+                "MediaStreamIndex": 4
+              },
+              {
+                "MediaStreamIndex": 5
+              }
+            ]
+          }
+        ],
+        "PublishingPointRedundancy": true
+      },
+      {
+        "Parameters": {
+          "FormatVersion": 3,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "DisableAudioOnly": true,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 2,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 3,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 4,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 5,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 6,
+            "AudioStreamIndex": 0
+          }
+        ],
+        "PartialPresentations": [],
+        "PublishingPointRedundancy": true
+      },
+      {
+        "Parameters": {
+          "FormatVersion": 3,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "DisableAudioOnly": true,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "IndependentRenditions": "dependent",
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 2,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 3,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 4,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 5,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 6,
+            "AudioStreamIndex": 0
+          }
+        ],
+        "PartialPresentations": [
+          {
+            "PartialPresentationName": "tve",
+            "ExcludedRenditions": [],
+            "IncludedMediaStreamPackages": [
+              {
+                "MediaStreamIndex": 0
+              },
+              {
+                "MediaStreamIndex": 1
+              },
+              {
+                "MediaStreamIndex": 2
+              },
+              {
+                "MediaStreamIndex": 3
+              },
+              {
+                "MediaStreamIndex": 4
+              },
+              {
+                "MediaStreamIndex": 5
+              }
+            ]
+          }
+        ],
+        "PublishingPointRedundancy": true
+      },
+      {
+        "Parameters": {
+          "FormatVersion": 3,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "DisableAudioOnly": true,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "IndependentRenditions": "dependent",
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 2,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 3,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 4,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 5,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 6,
+            "AudioStreamIndex": 0
+          }
+        ],
+        "PartialPresentations": [
+          {
+            "PartialPresentationName": "tve",
+            "ExcludedRenditions": [],
+            "IncludedMediaStreamPackages": [
+              {
+                "MediaStreamIndex": 0
+              },
+              {
+                "MediaStreamIndex": 1
+              },
+              {
+                "MediaStreamIndex": 2
+              },
+              {
+                "MediaStreamIndex": 3
+              },
+              {
+                "MediaStreamIndex": 4
+              },
+              {
+                "MediaStreamIndex": 5
+              }
+            ]
+          }
+        ],
+        "PublishingPointRedundancy": true
+      },
+      {
+        "Parameters": {
+          "FormatVersion": 3,
+          "SegmentDuration": 6,
+          "SegmentsPerFolder": 2000,
+          "NielsenRating": false,
+          "NielsenBreakoutCode": 0,
+          "DisableAudioOnly": true,
+          "SplitDRM": false,
+          "KeyInfoAfterScte": true,
+          "BaseName": ""
+        },
+        "Format": "HLS",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 2,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 3,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 4,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 5,
+            "AudioStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 6,
+            "AudioStreamIndex": 0
+          }
+        ],
+        "PartialPresentations": [
+          {
+            "PartialPresentationName": "tve",
+            "ExcludedRenditions": [],
+            "IncludedMediaStreamPackages": [
+              {
+                "MediaStreamIndex": 0
+              },
+              {
+                "MediaStreamIndex": 1
+              },
+              {
+                "MediaStreamIndex": 2
+              },
+              {
+                "MediaStreamIndex": 3
+              },
+              {
+                "MediaStreamIndex": 4
+              },
+              {
+                "MediaStreamIndex": 5
+              }
+            ]
+          }
+        ],
+        "PublishingPointRedundancy": false
+      }
+    ]
+  },
+  "Publish": {
+    "PublishingPoints": [
+      {
+        "PublishPointId": "msl3-primary",
+        "Url": "http://post.news-i.akamaihd.net/222234/nbc-news0724041408-ua",
+        "OriginalUrl": "http://post.news-i.akamaihd.net/222234/nbc-news0724041408-ua",
+        "GeneratedBasePublishUrl": "http://post.news-i.akamaihd.net/222234/nbc-news0724041408-ua",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://news-i.akamaihd.net/hls/live/222234/nbc-news0724041408-ua",
+        "PlaybackUrl": "http://news-i.akamaihd.net/hls/live/222234/nbc-news0724041408-ua/master.m3u8",
+        "CrossPublishPaths": [
+          "/hls/live/222234-b/nbc-news0724041408-ua"
+        ],
+        "StreamPackageIndex": 0,
+        "RedundantPublishing": false,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "msl3-secondary",
+        "Url": "http://postb.news-i.akamaihd.net/222234-b/nbc-news0724041408-ua",
+        "OriginalUrl": "http://postb.news-i.akamaihd.net/222234-b/nbc-news0724041408-ua",
+        "GeneratedBasePublishUrl": "http://postb.news-i.akamaihd.net/222234-b/nbc-news0724041408-ua",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://news-i.akamaihd.net/hls/live/222234-b/nbc-news0724041408-ua",
+        "PlaybackUrl": "http://news-i.akamaihd.net/hls/live/222234-b/nbc-news0724041408-ua/master.m3u8",
+        "CrossPublishPaths": [
+          "/hls/live/222234/nbc-news0724041408-ua"
+        ],
+        "StreamPackageIndex": 1,
+        "RedundantPublishing": false,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "msl4-primary",
+        "Url": "http://127.0.0.1:9090/p-ep723429.i.akamaientrypoint.net/723429/nbc-news0724041408-ua",
+        "OriginalUrl": "http://127.0.0.1:9090/p-ep723429.i.akamaientrypoint.net/723429/nbc-news0724041408-ua",
+        "GeneratedBasePublishUrl": "http://127.0.0.1:9090/p-ep723429.i.akamaientrypoint.net/723429/nbc-news0724041408-ua",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://nbcnews3.akamaized.net/hls/live/723429/nbc-news0724041408-ua",
+        "PlaybackUrl": "http://nbcnews3.akamaized.net/hls/live/723429/nbc-news0724041408-ua/master.m3u8",
+        "CrossPublishPaths": [
+          "/hls/live/723429-b/nbc-news0724041408-ua"
+        ],
+        "StreamPackageIndex": 2,
+        "RedundantPublishing": false,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "msl4-secondary",
+        "Url": "http://127.0.0.1:8989/b-ep723429.i.akamaientrypoint.net/723429-b/nbc-news0724041408-ua",
+        "OriginalUrl": "http://127.0.0.1:8989/b-ep723429.i.akamaientrypoint.net/723429-b/nbc-news0724041408-ua",
+        "GeneratedBasePublishUrl": "http://127.0.0.1:8989/b-ep723429.i.akamaientrypoint.net/723429-b/nbc-news0724041408-ua",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://nbcnews3.akamaized.net/hls/live/723429-b/nbc-news0724041408-ua",
+        "PlaybackUrl": "http://nbcnews3.akamaized.net/hls/live/723429-b/nbc-news0724041408-ua/master.m3u8",
+        "CrossPublishPaths": [
+          "/hls/live/723429/nbc-news0724041408-ua"
+        ],
+        "StreamPackageIndex": 3,
+        "RedundantPublishing": false,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "centurylink-primary",
+        "Url": "http://nbcnews3@nbcuni.origin.istreamplanet.net/live/nbc-news0724041408-ua",
+        "OriginalUrl": "http://nbcnews3@nbcuni.origin.istreamplanet.net/live/nbc-news0724041408-ua",
+        "GeneratedBasePublishUrl": "http://nbcnews3@nbcuni.origin.istreamplanet.net/live/nbc-news0724041408-ua",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://ctl-west.stream.telemundodeportes.com/live/nbc-news0724041408-ua",
+        "PlaybackUrl": "http://ctl-west.stream.telemundodeportes.com/live/nbc-news0724041408-ua/master.m3u8",
+        "StreamPackageIndex": 4,
+        "RedundantPublishing": true,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 60,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "centurylink-secondary",
+        "Url": "http://nbcnews3@nbcuni-east.origin.istreamplanet.net/live/nbc-news0724041408-ua",
+        "OriginalUrl": "http://nbcnews3@nbcuni-east.origin.istreamplanet.net/live/nbc-news0724041408-ua",
+        "GeneratedBasePublishUrl": "http://nbcnews3@nbcuni-east.origin.istreamplanet.net/live/nbc-news0724041408-ua",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://ctl-east.stream.telemundodeportes.com/live/nbc-news0724041408-ua",
+        "PlaybackUrl": "http://ctl-east.stream.telemundodeportes.com/live/nbc-news0724041408-ua/master.m3u8",
+        "StreamPackageIndex": 4,
+        "RedundantPublishing": true,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 60,
+        "SegmentRetryLimit": 16000
+      },
+      {
+        "PublishPointId": "live2vod",
+        "Url": "http://pubpoint.vod.istreamplanet.com/event/3/1/nbc-news0724041408-ua/1",
+        "OriginalUrl": "http://pubpoint.vod.istreamplanet.com/event/3/1/nbc-news0724041408-ua/1",
+        "GeneratedBasePublishUrl": "http://pubpoint.vod.istreamplanet.com/event/3/1/nbc-news0724041408-ua/1",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "http://pubpoint.vod.istreamplanet.com/event/3/1/nbc-news0724041408-ua/1",
+        "PlaybackUrl": "http://pubpoint.vod.istreamplanet.com/event/3/1/nbc-news0724041408-ua/1/master.m3u8",
+        "CrossPublishPaths": [
+          ""
+        ],
+        "StreamPackageIndex": 5,
+        "RedundantPublishing": false,
+        "CustomQueryString": "",
+        "StreamBaseName": "",
+        "AppendChannelNameToPath": false,
+        "UseAbsoluteUrlsInPlaylists": false,
+        "IncludeUTCTimeInPlaylists": true,
+        "MasterPlaylistName": "",
+        "SlidingWindowDuration": 36000,
+        "TimelineMarkerFormats": [
+          "AdobeSimple",
+          "Freewheel",
+          "mDialogSimple",
+          "SCTE35"
+        ],
+        "MasterPlaylistPublishFrequency": 0,
+        "SegmentRetryLimit": 16000
+      }
+    ]
+  },
+  "RetryCount": 0,
+  "IsDebugEnabled": false,
+  "IsPrimeTimeCustomer": true,
+  "CollectTrace": false,
+  "Status": "OffAir",
+  "Health": "Critical",
+  "LastStartTime": "2019-07-24T11:15:24.826Z",
+  "ServicesConfiguration": {
+    "AudioTranscoder": {},
+    "FragmentedMp4Capture": {},
+    "Global": {
+      "UseSegmentStore2": false
+    },
+    "HdsPublish": {},
+    "HlsPublish": {},
+    "HssPublish": {},
+    "LiveCaption": {},
+    "MulticastIngest": {
+      "EnableRTPPIDFiltering": false
+    },
+    "RtmpCapture": {},
+    "RtmpWriter": {},
+    "SegmentStore": {},
+    "VideoTranscoder": {
+      "DecoderVendor": "MainConcept",
+      "DenoiseLevel": 0,
+      "RealTimeTranscodeAlertWindow": 60000,
+      "SlowTranscodeWarningPct": 5,
+      "SlowTranscodeErrorPct": 10
+    },
+    "Metrics": {
+      "Brokers": "10.5.39.17,10.5.40.29,10.5.41.20",
+      "Topic": "prod.metrics",
+      "Tags": {
+        "feed_name": "nbc_news_primary",
+        "aventus_channel_name": "nbcnews3",
+        "provider": "unknown",
+        "distributor": "nbcsports",
+        "environment": "prod",
+        "region": "vegas",
+        "source_origin": "cvr",
+        "scale_unit_id": "las-157-166-151-162.istreamplanet.com",
+        "combined": "nbcnews3/unknown/nbcsports/nbc_news_primary"
+      }
+    },
+    "ChannelTimeline": {
+      "ProcessScte35": true
+    }
+  },
+  "SendEndOfCaptions": false,
+  "Kill": false,
+  "IsDeleted": false,
+  "Id": "cf10c72e-d692-49a1-a014-791ef1e4796d",
+  "ETag": "98deedf0-7e83-45f8-a593-99840a5bb7e4",
+  "Tag": "a1763a3f-19fc-46b4-9c5e-da989b6a15ff",
+  "CreatedTime": "2018-10-16T08:48:24.588Z",
+  "LastUpdateTime": "2019-07-24T21:17:49.366Z",
+  "TimeElapsedSince": "11:51:23.6180102",
+  "Version": "7.9.30905.1"
+}
