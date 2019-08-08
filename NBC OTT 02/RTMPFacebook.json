@@ -1,0 +1,192 @@
+{
+  "ChannelId": "86569688-8b63-4d6c-b5a8-f5ab778f152a",
+  "RunId": "e0f66642-9731-4b30-827e-79a0cbc7b9f3",
+  "ChannelProperties": {
+    "Name": "RTMPFacebook",
+    "Description": "",
+    "InsertSlateOnAdMarker": false,
+    "InsertSlateOnUPID": {
+      "SegmentUPID": "0",
+      "SegmentUPIDType": 0
+    },
+    "Tags": []
+  },
+  "Ingest": {
+    "Url": "source://nbc07_primary",
+    "RedundantCVR": true,
+    "SourceStreams": [
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 Video' or StreamTypeName='H.264']",
+        "StreamIndex": 0,
+        "Type": "Video"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 0,
+        "Type": "Audio"
+      }
+    ],
+    "ProgramIndex": 0,
+    "IgnoreSurroundAudio": false,
+    "CEA708ClosedCaptions": false,
+    "SourcePTSPassthrough": false,
+    "SCTE35CommandTypes": [
+      "SpliceInsert"
+    ],
+    "SCTE35SegmentTypes": [
+      "Ad"
+    ],
+    "IngestSCTE35": true,
+    "HonorSCTE35WebDeliveryFlag": true
+  },
+  "Encode": {
+    "CodecConfigs": [
+      {
+        "VideoCodec": "H.264",
+        "H264Profile": "HIGH",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 1,
+        "NumBFrames": 2,
+        "Type": "Video"
+      },
+      {
+        "VideoCodec": "H.264",
+        "H264Profile": "MAIN",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 1,
+        "NumBFrames": 2,
+        "Type": "Video"
+      },
+      {
+        "AudioCodec": "AAC",
+        "HeAac": 0,
+        "MpegVersion": "MPEG4_AAC_AUDIO",
+        "AacHeaderType": "AAC_HEADER_ADTS",
+        "Type": "Audio"
+      }
+    ],
+    "ElementaryStreams": [
+      {
+        "Width": 1280,
+        "Height": 720,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "Video_1280x720_30fps_2000kbps",
+        "Type": "Video",
+        "BitRate": 2000000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Channels": 2,
+        "SampleRate": 44100,
+        "Language": "und",
+        "Name": "Audio_128kbps_44100Hz_stereo",
+        "Type": "Audio",
+        "BitRate": 128000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 0
+      }
+    ]
+  },
+  "Package": {
+    "StreamPackages": [
+      {
+        "Parameters": {
+          "OnCuePointCaptionsEnable": false
+        },
+        "Format": "RTMP",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0
+          },
+          {
+            "Name": "Undetermined",
+            "AudioStreamIndex": 0
+          }
+        ]
+      }
+    ]
+  },
+  "Publish": {
+    "PublishingPoints": [
+      {
+        "PublishPointId": "",
+        "Url": "rtmp://live-api-s.facebook.com:80/rtmp/",
+        "OriginalUrl": "rtmp://live-api-s.facebook.com:80/rtmp/",
+        "GeneratedBasePublishUrl": "rtmp://live-api-s.facebook.com:80/rtmp/",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "rtmp://live-api-s.facebook.com:80/rtmp/",
+        "PlaybackUrl": "rtmp://live-api-s.facebook.com:80/rtmp/10157829663516521?s_ps=1&s_sw=0&s_vt=api-s&a=AbwvIV_tk4DBi5qA",
+        "StreamPackageIndex": 0,
+        "RtmpMode": "AMS",
+        "CustomQueryString": "",
+        "StreamBaseName": "10157829663516521?s_ps=1&s_sw=0&s_vt=api-s&a=AbwvIV_tk4DBi5qA",
+        "Angle": "0"
+      }
+    ]
+  },
+  "RetryCount": 0,
+  "IsDebugEnabled": false,
+  "IsPrimeTimeCustomer": true,
+  "CollectTrace": false,
+  "Status": "OffAir",
+  "Health": "Critical",
+  "LastStartTime": "2018-12-14T17:39:50.7Z",
+  "ServicesConfiguration": {
+    "AudioTranscoder": {},
+    "FragmentedMp4Capture": {},
+    "Global": {
+      "UseSegmentStore2": false
+    },
+    "HdsPublish": {},
+    "HlsPublish": {},
+    "HssPublish": {},
+    "LiveCaption": {},
+    "MulticastIngest": {
+      "EnableRTPPIDFiltering": false
+    },
+    "RtmpCapture": {},
+    "RtmpWriter": {},
+    "SegmentStore": {},
+    "VideoTranscoder": {
+      "DecoderVendor": "MainConcept",
+      "DenoiseLevel": 0,
+      "RealTimeTranscodeAlertWindow": 60000,
+      "SlowTranscodeWarningPct": 5,
+      "SlowTranscodeErrorPct": 10
+    },
+    "ChannelTimeline": {
+      "ScteLoggingEnabled": true,
+      "ProcessScte35": true
+    },
+    "Metrics": {
+      "Brokers": "10.5.39.17,10.5.40.29,10.5.41.20",
+      "Topic": "prod.metrics",
+      "Tags": {
+        "feed_name": "nbc07_primary",
+        "aventus_channel_name": "rtmpfacebook",
+        "provider": "unknown",
+        "distributor": "unknown",
+        "environment": "prod",
+        "region": "vegas",
+        "source_origin": "cvr",
+        "scale_unit_id": "las-157-166-151-50.istreamplanet.com",
+        "combined": "rtmpfacebook/unknown/unknown/nbc07_primary"
+      }
+    }
+  },
+  "Kill": true,
+  "IsDeleted": false,
+  "Id": "86569688-8b63-4d6c-b5a8-f5ab778f152a",
+  "ETag": "fda3388a-65d5-4104-878f-c439cb6e00c9",
+  "Tag": "1b19d170-8350-4ec1-9636-d35e12af4196",
+  "CreatedTime": "2018-11-13T22:13:51.989Z",
+  "LastUpdateTime": "2018-12-14T18:55:50.74Z",
+  "TimeElapsedSince": "222.14:13:10.7500728",
+  "Version": "7.9.30945.1"
+}

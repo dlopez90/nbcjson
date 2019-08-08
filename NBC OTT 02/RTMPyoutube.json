@@ -1,0 +1,192 @@
+{
+  "ChannelId": "4070bf03-5dc8-47f1-9320-1aa0ebf701b5",
+  "RunId": "762631c9-35fb-4728-b754-a657d60fe0a3",
+  "ChannelProperties": {
+    "Name": "RTMPyoutube",
+    "Description": "",
+    "InsertSlateOnAdMarker": false,
+    "InsertSlateOnUPID": {
+      "SegmentUPID": "0",
+      "SegmentUPIDType": 0
+    },
+    "Tags": []
+  },
+  "Ingest": {
+    "Url": "source://nbc07_primary",
+    "RedundantCVR": true,
+    "SourceStreams": [
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 Video' or StreamTypeName='H.264']",
+        "StreamIndex": 0,
+        "Type": "Video"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 0,
+        "Type": "Audio"
+      }
+    ],
+    "ProgramIndex": 0,
+    "IgnoreSurroundAudio": false,
+    "CEA708ClosedCaptions": false,
+    "SourcePTSPassthrough": false,
+    "SCTE35CommandTypes": [
+      "SpliceInsert"
+    ],
+    "SCTE35SegmentTypes": [
+      "Ad"
+    ],
+    "IngestSCTE35": true,
+    "HonorSCTE35WebDeliveryFlag": true
+  },
+  "Encode": {
+    "CodecConfigs": [
+      {
+        "VideoCodec": "H.264",
+        "H264Profile": "HIGH",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 1,
+        "NumBFrames": 2,
+        "Type": "Video"
+      },
+      {
+        "VideoCodec": "H.264",
+        "H264Profile": "MAIN",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 1,
+        "NumBFrames": 2,
+        "Type": "Video"
+      },
+      {
+        "AudioCodec": "AAC",
+        "HeAac": 0,
+        "MpegVersion": "MPEG4_AAC_AUDIO",
+        "AacHeaderType": "AAC_HEADER_ADTS",
+        "Type": "Audio"
+      }
+    ],
+    "ElementaryStreams": [
+      {
+        "Width": 1280,
+        "Height": 720,
+        "MaxFrameRate": 60,
+        "ResizeMode": "STRETCH",
+        "Name": "Video_1280x720_30fps_2000kbps",
+        "Type": "Video",
+        "BitRate": 2000000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Channels": 2,
+        "SampleRate": 44100,
+        "Language": "und",
+        "Name": "Audio_128kbps_44100Hz_stereo",
+        "Type": "Audio",
+        "BitRate": 128000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 0
+      }
+    ]
+  },
+  "Package": {
+    "StreamPackages": [
+      {
+        "Parameters": {
+          "OnCuePointCaptionsEnable": false
+        },
+        "Format": "RTMP",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0
+          },
+          {
+            "Name": "Undetermined",
+            "AudioStreamIndex": 0
+          }
+        ]
+      }
+    ]
+  },
+  "Publish": {
+    "PublishingPoints": [
+      {
+        "PublishPointId": "",
+        "Url": "rtmp://a.rtmp.youtube.com/live2",
+        "OriginalUrl": "rtmp://a.rtmp.youtube.com/live2",
+        "GeneratedBasePublishUrl": "rtmp://a.rtmp.youtube.com/live2",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "rtmp://a.rtmp.youtube.com/live2",
+        "PlaybackUrl": "rtmp://a.rtmp.youtube.com/live2/wfy7-p66a-9j15-7d92",
+        "StreamPackageIndex": 0,
+        "RtmpMode": "AMS",
+        "CustomQueryString": "",
+        "StreamBaseName": "wfy7-p66a-9j15-7d92",
+        "Angle": "0"
+      }
+    ]
+  },
+  "RetryCount": 0,
+  "IsDebugEnabled": false,
+  "IsPrimeTimeCustomer": true,
+  "CollectTrace": false,
+  "Status": "OffAir",
+  "Health": "Critical",
+  "LastStartTime": "2018-12-14T17:41:27.862Z",
+  "ServicesConfiguration": {
+    "AudioTranscoder": {},
+    "FragmentedMp4Capture": {},
+    "Global": {
+      "UseSegmentStore2": false
+    },
+    "HdsPublish": {},
+    "HlsPublish": {},
+    "HssPublish": {},
+    "LiveCaption": {},
+    "MulticastIngest": {
+      "EnableRTPPIDFiltering": false
+    },
+    "RtmpCapture": {},
+    "RtmpWriter": {},
+    "SegmentStore": {},
+    "VideoTranscoder": {
+      "DecoderVendor": "MainConcept",
+      "DenoiseLevel": 0,
+      "RealTimeTranscodeAlertWindow": 60000,
+      "SlowTranscodeWarningPct": 5,
+      "SlowTranscodeErrorPct": 10
+    },
+    "ChannelTimeline": {
+      "ScteLoggingEnabled": true,
+      "ProcessScte35": true
+    },
+    "Metrics": {
+      "Brokers": "10.5.39.17,10.5.40.29,10.5.41.20",
+      "Topic": "prod.metrics",
+      "Tags": {
+        "feed_name": "nbc07_primary",
+        "aventus_channel_name": "rtmpyoutube",
+        "provider": "unknown",
+        "distributor": "unknown",
+        "environment": "prod",
+        "region": "vegas",
+        "source_origin": "cvr",
+        "scale_unit_id": "las-157-166-151-50.istreamplanet.com",
+        "combined": "rtmpyoutube/unknown/unknown/nbc07_primary"
+      }
+    }
+  },
+  "Kill": true,
+  "IsDeleted": false,
+  "Id": "4070bf03-5dc8-47f1-9320-1aa0ebf701b5",
+  "ETag": "65e09a6c-b80b-4dc9-acf6-be0be8582ceb",
+  "Tag": "7e6d97b1-ffed-407b-a491-86c7f4066d07",
+  "CreatedTime": "2018-12-14T17:41:09.731Z",
+  "LastUpdateTime": "2018-12-14T18:56:25.072Z",
+  "TimeElapsedSince": "222.14:12:36.7770315",
+  "Version": "7.9.30945.1"
+}

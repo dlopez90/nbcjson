@@ -1,0 +1,284 @@
+{
+  "ChannelId": "622c8a34-a319-418b-ac94-11d3ef85b4fc",
+  "RunId": "050df3e9-b062-4346-85ab-5e337cf8eca3",
+  "ChannelProperties": {
+    "Name": "rtmpPubpointTest",
+    "Description": "",
+    "InsertSlateOnAdMarker": false,
+    "InsertSlateOnUPID": {
+      "SegmentUPID": "0",
+      "SegmentUPIDType": 0
+    },
+    "Tags": []
+  },
+  "Ingest": {
+    "Url": "source://nbc_golf_01_primary",
+    "RedundantCVR": true,
+    "SourceStreams": [
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 Video' or StreamTypeName='H.264']",
+        "StreamIndex": 0,
+        "Type": "Video"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 0,
+        "Type": "Audio"
+      }
+    ],
+    "ProgramIndex": 0,
+    "IgnoreSurroundAudio": false,
+    "CEA708ClosedCaptions": true,
+    "SourcePTSPassthrough": false,
+    "SCTE35CommandTypes": [
+      "SpliceInsert"
+    ],
+    "SCTE35SegmentTypes": [
+      "Ad"
+    ],
+    "IngestSCTE35": true,
+    "HonorSCTE35WebDeliveryFlag": true
+  },
+  "Encode": {
+    "CodecConfigs": [
+      {
+        "VideoCodec": "H.264",
+        "H264Profile": "HIGH",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 4,
+        "NumBFrames": 3,
+        "Type": "Video"
+      },
+      {
+        "VideoCodec": "H.264",
+        "H264Profile": "MAIN",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 4,
+        "NumBFrames": 3,
+        "Type": "Video"
+      },
+      {
+        "VideoCodec": "H.264",
+        "H264Profile": "BASELINE",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 5,
+        "NumBFrames": 0,
+        "Type": "Video"
+      },
+      {
+        "AudioCodec": "AAC",
+        "HeAac": 0,
+        "MpegVersion": "MPEG4_AAC_AUDIO",
+        "AacHeaderType": "AAC_HEADER_ADTS",
+        "Type": "Audio"
+      }
+    ],
+    "ElementaryStreams": [
+      {
+        "Width": 1280,
+        "Height": 720,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "Video_1280x720_30fps_3500kbps",
+        "Type": "Video",
+        "BitRate": 3500000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 0
+      },
+      {
+        "Width": 960,
+        "Height": 540,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "Video_960x540_30fps_2200kbps",
+        "Type": "Video",
+        "BitRate": 2200000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 704,
+        "Height": 396,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "Video_704x396_30fps_1350kbps",
+        "Type": "Video",
+        "BitRate": 1350000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 512,
+        "Height": 288,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "Video_512x288_30fps_850kbps",
+        "Type": "Video",
+        "BitRate": 850000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 384,
+        "Height": 216,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "Video_384x216_30fps_550kbps",
+        "Type": "Video",
+        "BitRate": 550000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Width": 340,
+        "Height": 192,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "Video_340x192_30fps_350kbps",
+        "Type": "Video",
+        "BitRate": 350000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 2
+      },
+      {
+        "Width": 340,
+        "Height": 192,
+        "MaxFrameRate": 30,
+        "ResizeMode": "STRETCH",
+        "Name": "Video_340x192_30fps_200kbps",
+        "Type": "Video",
+        "BitRate": 200000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 2
+      },
+      {
+        "Channels": 2,
+        "SampleRate": 44100,
+        "Language": "und",
+        "Name": "Audio_64kbps_44100Hz_stereo",
+        "Type": "Audio",
+        "BitRate": 64000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 0
+      }
+    ]
+  },
+  "Package": {
+    "StreamPackages": [
+      {
+        "Parameters": {
+          "OnCuePointCaptionsEnable": false
+        },
+        "Format": "RTMP",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0
+          },
+          {
+            "VideoStreamIndex": 1
+          },
+          {
+            "VideoStreamIndex": 2
+          },
+          {
+            "VideoStreamIndex": 3
+          },
+          {
+            "VideoStreamIndex": 4
+          },
+          {
+            "VideoStreamIndex": 5
+          },
+          {
+            "VideoStreamIndex": 6
+          },
+          {
+            "Name": "Undetermined",
+            "AudioStreamIndex": 0
+          }
+        ]
+      }
+    ]
+  },
+  "Publish": {
+    "PublishingPoints": [
+      {
+        "PublishPointId": "",
+        "Url": "rtmp://ingest.sidearmstreaming.com/live",
+        "OriginalUrl": "rtmp://ingest.sidearmstreaming.com/live",
+        "GeneratedBasePublishUrl": "rtmp://ingest.sidearmstreaming.com/live",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "rtmp://ingest.sidearmstreaming.com/live/",
+        "PlaybackUrl": "rtmp://ingest.sidearmstreaming.com/live/usfigure_1?key=925e52c44b24144_3500000|rtmp://ingest.sidearmstreaming.com/live/usfigure_1?key=925e52c44b24144_2200000|rtmp://ingest.sidearmstreaming.com/live/usfigure_1?key=925e52c44b24144_1350000|rtmp://ingest.sidearmstreaming.com/live/usfigure_1?key=925e52c44b24144_850000|rtmp://ingest.sidearmstreaming.com/live/usfigure_1?key=925e52c44b24144_550000|rtmp://ingest.sidearmstreaming.com/live/usfigure_1?key=925e52c44b24144_350000|rtmp://ingest.sidearmstreaming.com/live/usfigure_1?key=925e52c44b24144_200000|",
+        "StreamPackageIndex": 0,
+        "RtmpMode": "AMS",
+        "CustomQueryString": "",
+        "StreamBaseName": "usfigure_1?key=925e52c44b24144",
+        "Angle": "0"
+      }
+    ]
+  },
+  "RetryCount": 0,
+  "IsDebugEnabled": false,
+  "IsPrimeTimeCustomer": true,
+  "CollectTrace": false,
+  "Status": "OffAir",
+  "Health": "Critical",
+  "LastStartTime": "2018-11-13T22:10:17.617Z",
+  "ServicesConfiguration": {
+    "AudioTranscoder": {},
+    "FragmentedMp4Capture": {},
+    "Global": {
+      "UseSegmentStore2": false
+    },
+    "HdsPublish": {},
+    "HlsPublish": {},
+    "HssPublish": {},
+    "LiveCaption": {},
+    "MulticastIngest": {
+      "EnableRTPPIDFiltering": false
+    },
+    "RtmpCapture": {},
+    "RtmpWriter": {},
+    "SegmentStore": {},
+    "VideoTranscoder": {
+      "DecoderVendor": "MainConcept",
+      "DenoiseLevel": 0,
+      "RealTimeTranscodeAlertWindow": 60000,
+      "SlowTranscodeWarningPct": 5,
+      "SlowTranscodeErrorPct": 10
+    },
+    "Metrics": {
+      "Brokers": "10.5.39.17,10.5.40.29,10.5.41.20",
+      "Topic": "prod.metrics",
+      "Tags": {
+        "feed_name": "nbc_golf_01_primary",
+        "aventus_channel_name": "rtmppubpointtest",
+        "provider": "unknown",
+        "distributor": "unknown",
+        "environment": "prod",
+        "region": "vegas",
+        "source_origin": "cvr",
+        "scale_unit_id": "las-157-166-151-50.istreamplanet.com",
+        "combined": "rtmppubpointtest/unknown/unknown/nbc_golf_01_primary"
+      }
+    },
+    "ChannelTimeline": {
+      "ProcessScte35": true
+    }
+  },
+  "Kill": false,
+  "IsDeleted": false,
+  "Id": "622c8a34-a319-418b-ac94-11d3ef85b4fc",
+  "ETag": "9938a07b-52c1-4446-8589-878fe7a8bd00",
+  "Tag": "3aff10f4-d5b9-4daa-8f7c-9cc39408b9b3",
+  "CreatedTime": "2018-11-13T22:09:45.028Z",
+  "LastUpdateTime": "2018-11-13T22:13:56.74Z",
+  "TimeElapsedSince": "253.10:55:04.8292846",
+  "Version": "7.9.30945.1"
+}

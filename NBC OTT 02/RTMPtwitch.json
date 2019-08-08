@@ -1,0 +1,192 @@
+{
+  "ChannelId": "6b8367a2-91b4-4f55-9e45-5b2f3a857284",
+  "RunId": "4e7041ca-48ba-4e36-9910-7ffbba963aeb",
+  "ChannelProperties": {
+    "Name": "RTMPtwitch",
+    "Description": "",
+    "InsertSlateOnAdMarker": false,
+    "InsertSlateOnUPID": {
+      "SegmentUPID": "0",
+      "SegmentUPIDType": 0
+    },
+    "Tags": []
+  },
+  "Ingest": {
+    "Url": "source://nbc13_primary",
+    "RedundantCVR": true,
+    "SourceStreams": [
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 Video' or StreamTypeName='H.264']",
+        "StreamIndex": 0,
+        "Type": "Video"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 0,
+        "Type": "Audio"
+      }
+    ],
+    "ProgramIndex": 0,
+    "IgnoreSurroundAudio": false,
+    "CEA708ClosedCaptions": false,
+    "SourcePTSPassthrough": false,
+    "SCTE35CommandTypes": [
+      "SpliceInsert"
+    ],
+    "SCTE35SegmentTypes": [
+      "Ad"
+    ],
+    "IngestSCTE35": true,
+    "HonorSCTE35WebDeliveryFlag": true
+  },
+  "Encode": {
+    "CodecConfigs": [
+      {
+        "VideoCodec": "H.264",
+        "H264Profile": "HIGH",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 1,
+        "NumBFrames": 2,
+        "Type": "Video"
+      },
+      {
+        "VideoCodec": "H.264",
+        "H264Profile": "MAIN",
+        "BufferDuration": 4,
+        "GOPMaxDuration": 2,
+        "NumReferenceFrames": 1,
+        "NumBFrames": 2,
+        "Type": "Video"
+      },
+      {
+        "AudioCodec": "AAC",
+        "HeAac": 0,
+        "MpegVersion": "MPEG4_AAC_AUDIO",
+        "AacHeaderType": "AAC_HEADER_ADTS",
+        "Type": "Audio"
+      }
+    ],
+    "ElementaryStreams": [
+      {
+        "Width": 1280,
+        "Height": 720,
+        "MaxFrameRate": 60,
+        "ResizeMode": "STRETCH",
+        "Name": "Video_1280x720_30fps_2000kbps",
+        "Type": "Video",
+        "BitRate": 2000000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 1
+      },
+      {
+        "Channels": 2,
+        "SampleRate": 44100,
+        "Language": "und",
+        "Name": "Audio_128kbps_44100Hz_stereo",
+        "Type": "Audio",
+        "BitRate": 128000,
+        "SourceStreamIndex": 0,
+        "CodecConfigIndex": 0
+      }
+    ]
+  },
+  "Package": {
+    "StreamPackages": [
+      {
+        "Parameters": {
+          "OnCuePointCaptionsEnable": false
+        },
+        "Format": "RTMP",
+        "StreamCollection": [
+          {
+            "VideoStreamIndex": 0
+          },
+          {
+            "Name": "Undetermined",
+            "AudioStreamIndex": 0
+          }
+        ]
+      }
+    ]
+  },
+  "Publish": {
+    "PublishingPoints": [
+      {
+        "PublishPointId": "",
+        "Url": "rtmp://live-jfk.twitch.tv/app",
+        "OriginalUrl": "rtmp://live-jfk.twitch.tv/app",
+        "GeneratedBasePublishUrl": "rtmp://live-jfk.twitch.tv/app",
+        "HttpAuth": "None",
+        "UserName": "",
+        "Password": "",
+        "PlaybackBasePath": "rtmp://live-jfk.twitch.tv/app",
+        "PlaybackUrl": "rtmp://live-jfk.twitch.tv/app/live_192805101_ncf4kJX1XSSdFKwahuTbeWGVd7DChI",
+        "StreamPackageIndex": 0,
+        "RtmpMode": "AMS",
+        "CustomQueryString": "",
+        "StreamBaseName": "live_192805101_ncf4kJX1XSSdFKwahuTbeWGVd7DChI",
+        "Angle": "0"
+      }
+    ]
+  },
+  "RetryCount": 0,
+  "IsDebugEnabled": false,
+  "IsPrimeTimeCustomer": true,
+  "CollectTrace": false,
+  "Status": "OffAir",
+  "Health": "Normal",
+  "LastStartTime": "2019-05-30T17:20:35.149Z",
+  "ServicesConfiguration": {
+    "AudioTranscoder": {},
+    "FragmentedMp4Capture": {},
+    "Global": {
+      "UseSegmentStore2": false
+    },
+    "HdsPublish": {},
+    "HlsPublish": {},
+    "HssPublish": {},
+    "LiveCaption": {},
+    "MulticastIngest": {
+      "EnableRTPPIDFiltering": false
+    },
+    "RtmpCapture": {},
+    "RtmpWriter": {},
+    "SegmentStore": {},
+    "VideoTranscoder": {
+      "DecoderVendor": "MainConcept",
+      "DenoiseLevel": 0,
+      "RealTimeTranscodeAlertWindow": 60000,
+      "SlowTranscodeWarningPct": 5,
+      "SlowTranscodeErrorPct": 10
+    },
+    "ChannelTimeline": {
+      "ScteLoggingEnabled": true,
+      "ProcessScte35": true
+    },
+    "Metrics": {
+      "Brokers": "10.5.39.17,10.5.40.29,10.5.41.20",
+      "Topic": "prod.metrics",
+      "Tags": {
+        "feed_name": "nbc27_primary",
+        "aventus_channel_name": "rtmptwitch",
+        "provider": "unknown",
+        "distributor": "unknown",
+        "environment": "prod",
+        "region": "vegas",
+        "source_origin": "cvr",
+        "scale_unit_id": "las-157-166-151-50.istreamplanet.com",
+        "combined": "rtmptwitch/unknown/unknown/nbc27_primary"
+      }
+    }
+  },
+  "Kill": false,
+  "IsDeleted": false,
+  "Id": "6b8367a2-91b4-4f55-9e45-5b2f3a857284",
+  "ETag": "629f8e1d-e1a7-4508-af1f-af14795a9507",
+  "Tag": "6b44897d-eb29-4e5b-90ed-411e968f005c",
+  "CreatedTime": "2019-03-13T14:36:35.454Z",
+  "LastUpdateTime": "2019-05-30T22:22:56.837Z",
+  "TimeElapsedSince": "55.10:46:04.7723921",
+  "Version": "7.9.30945.1"
+}
