@@ -320,9 +320,9 @@
     "PublishingPoints": [
       {
         "PublishPointId": "f1tv-primary",
-        "Url": "http://f1pit@nbcsports.origin.istreamplanet.net/live/pit-lane0718073841",
-        "OriginalUrl": "http://f1pit@nbcsports.origin.istreamplanet.net/live/pit-lane0718073841",
-        "GeneratedBasePublishUrl": "http://f1pit@nbcsports.origin.istreamplanet.net/live/pit-lane0718073841",
+        "Url": "http://f1pit@nbcu-west.nbc.origin.istreamplanet.net/live/pit-lane0718073841",
+        "OriginalUrl": "http://f1pit@nbcu-west.nbc.origin.istreamplanet.net/live/pit-lane0718073841",
+        "GeneratedBasePublishUrl": "http://f1pit@nbcu-west.nbc.origin.istreamplanet.net/live/pit-lane0718073841",
         "HttpAuth": "None",
         "UserName": "",
         "Password": "",
@@ -349,9 +349,9 @@
       },
       {
         "PublishPointId": "f1tv-secondary",
-        "Url": "http://f1pit@nbcsports-east.origin.istreamplanet.net/live/pit-lane0718073841",
-        "OriginalUrl": "http://f1pit@nbcsports-east.origin.istreamplanet.net/live/pit-lane0718073841",
-        "GeneratedBasePublishUrl": "http://f1pit@nbcsports-east.origin.istreamplanet.net/live/pit-lane0718073841",
+        "Url": "http://f1pit@nbcu-east.nbc.istreamplanet.net/live/pit-lane0718073841",
+        "OriginalUrl": "http://f1pit@nbcu-east.nbc.istreamplanet.net/live/pit-lane0718073841",
+        "GeneratedBasePublishUrl": "http://f1pit@nbcu-east.nbc.istreamplanet.net/live/pit-lane0718073841",
         "HttpAuth": "None",
         "UserName": "",
         "Password": "",
