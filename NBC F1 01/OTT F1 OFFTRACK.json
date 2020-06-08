@@ -1,8 +1,8 @@
 {
-  "ChannelId": "329e35e2-089d-4471-abc5-55eb4d1c272d",
-  "RunId": "1debcab2-a27a-4b64-ac21-65370cfdf601",
+  "ChannelId": "4b05f0ca-e2e7-42ce-9902-6ba55dd763c1",
+  "RunId": "9f1609c8-77c3-425e-8ec0-3cde096859d9",
   "ChannelProperties": {
-    "Name": "OTT F1 13",
+    "Name": "OTT F1 OFFTRACK 01",
     "Description": "",
     "DefaultSlateURL": "http://smooth-las-akam.istreamplanet.com/live/hls/slate/black.jpg",
     "ErrorSlateURL": "http://smooth-las-akam.istreamplanet.com/live/hls/slate/black.jpg",
@@ -16,7 +16,7 @@
     ]
   },
   "Ingest": {
-    "Url": "source://nbc_f1_obs_13_primary",
+    "Url": "source://nbc_f1_wif_01_primary",
     "RedundantCVR": true,
     "SourceStreams": [
       {
@@ -31,7 +31,17 @@
       },
       {
         "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 2,
+        "Type": "Audio"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
         "StreamIndex": 1,
+        "Type": "Audio"
+      },
+      {
+        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
+        "StreamIndex": 4,
         "Type": "Audio"
       },
       {
@@ -41,17 +51,7 @@
       },
       {
         "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
-        "StreamIndex": 2,
-        "Type": "Audio"
-      },
-      {
-        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
         "StreamIndex": 5,
-        "Type": "Audio"
-      },
-      {
-        "Stream": "//Stream[StreamTypeName='MPEG-2 AAC ADTS' or StreamTypeName='AC-3 System-A' or StreamTypeName='AC-3 System-B' or StreamTypeName='MPEG-1 Audio' or StreamTypeName='MPEG-2 Audio']",
-        "StreamIndex": 4,
         "Type": "Audio"
       }
     ],
@@ -199,7 +199,7 @@
       {
         "Channels": 2,
         "SampleRate": 44100,
-        "Language": "eng",
+        "Language": "fre",
         "Name": "Audio_64kbps_44100Hz_stereo",
         "Type": "Audio",
         "BitRate": 64000,
@@ -209,7 +209,7 @@
       {
         "Channels": 2,
         "SampleRate": 44100,
-        "Language": "fre",
+        "Language": "ger",
         "Name": "Audio_64kbps_44100Hz_stereo",
         "Type": "Audio",
         "BitRate": 64000,
@@ -219,7 +219,7 @@
       {
         "Channels": 2,
         "SampleRate": 44100,
-        "Language": "ger",
+        "Language": "dut",
         "Name": "Audio_64kbps_44100Hz_stereo",
         "Type": "Audio",
         "BitRate": 64000,
@@ -229,7 +229,7 @@
       {
         "Channels": 2,
         "SampleRate": 44100,
-        "Language": "dut",
+        "Language": "spa",
         "Name": "Audio_64kbps_44100Hz_stereo",
         "Type": "Audio",
         "BitRate": 64000,
@@ -239,7 +239,7 @@
       {
         "Channels": 2,
         "SampleRate": 44100,
-        "Language": "spa",
+        "Language": "und",
         "Name": "Audio_64kbps_44100Hz_stereo",
         "Type": "Audio",
         "BitRate": 64000,
@@ -286,27 +286,27 @@
             "VideoStreamIndex": 6
           },
           {
-            "Name": "TeamRadio",
+            "Name": "English",
             "AudioStreamIndex": 0
           },
           {
-            "Name": "English",
+            "Name": "Francais",
             "AudioStreamIndex": 1
           },
           {
-            "Name": "Francais",
+            "Name": "Deutsch",
             "AudioStreamIndex": 2
           },
           {
-            "Name": "Deutsch",
+            "Name": "Nederlands",
             "AudioStreamIndex": 3
           },
           {
-            "Name": "Nederlands",
+            "Name": "Espanol",
             "AudioStreamIndex": 4
           },
           {
-            "Name": "Espanol",
+            "Name": "FX",
             "AudioStreamIndex": 5
           },
           {
@@ -364,27 +364,27 @@
             "VideoStreamIndex": 6
           },
           {
-            "Name": "TeamRadio",
+            "Name": "English",
             "AudioStreamIndex": 0
           },
           {
-            "Name": "English",
+            "Name": "Francais",
             "AudioStreamIndex": 1
           },
           {
-            "Name": "Francais",
+            "Name": "Deutsch",
             "AudioStreamIndex": 2
           },
           {
-            "Name": "Deutsch",
+            "Name": "Nederlands",
             "AudioStreamIndex": 3
           },
           {
-            "Name": "Nederlands",
+            "Name": "Espanol",
             "AudioStreamIndex": 4
           },
           {
-            "Name": "Espanol",
+            "Name": "FX",
             "AudioStreamIndex": 5
           },
           {
@@ -412,14 +412,14 @@
     "PublishingPoints": [
       {
         "PublishPointId": "f1tv-primary",
-        "Url": "http://f113@nbcu-west.nbc.origin.istreamplanet.net/live/50526040825",
-        "OriginalUrl": "http://f113@nbcu-west.nbc.origin.istreamplanet.net/live/50526040825",
-        "GeneratedBasePublishUrl": "http://f113@nbcu-west.nbc.origin.istreamplanet.net/live/50526040825",
+        "Url": "http://f1offtrack@nbcu-west.nbc.origin.istreamplanet.net/live/wif0723105452",
+        "OriginalUrl": "http://f1offtrack@nbcu-west.nbc.origin.istreamplanet.net/live/wif0723105452",
+        "GeneratedBasePublishUrl": "http://f1offtrack@nbcu-west.nbc.origin.istreamplanet.net/live/wif0723105452",
         "HttpAuth": "None",
         "UserName": "",
         "Password": "",
-        "PlaybackBasePath": "https://f1tv-cdn-cent-west.formula1.com/live/50526040825",
-        "PlaybackUrl": "https://f1tv-cdn-cent-west.formula1.com/live/50526040825/master.m3u8",
+        "PlaybackBasePath": "https://f1tv-cdn-cent-west.formula1.com/live/wif0723105452",
+        "PlaybackUrl": "https://f1tv-cdn-cent-west.formula1.com/live/wif0723105452/master.m3u8",
         "CrossPublishPaths": [],
         "StreamPackageIndex": 0,
         "RedundantPublishing": true,
@@ -441,14 +441,14 @@
       },
       {
         "PublishPointId": "f1tv-secondary",
-        "Url": "http://f113@nbcu-east.nbc.origin.istreamplanet.net/live/50526040825",
-        "OriginalUrl": "http://f113@nbcu-east.nbc.origin.istreamplanet.net/live/50526040825",
-        "GeneratedBasePublishUrl": "http://f113@nbcu-east.nbc.origin.istreamplanet.net/live/50526040825",
+        "Url": "http://f1offtrack@nbcu-east.nbc.origin.istreamplanet.net/live/wif0723105452",
+        "OriginalUrl": "http://f1offtrack@nbcu-east.nbc.origin.istreamplanet.net/live/wif0723105452",
+        "GeneratedBasePublishUrl": "http://f1offtrack@nbcu-east.nbc.origin.istreamplanet.net/live/wif0723105452",
         "HttpAuth": "None",
         "UserName": "",
         "Password": "",
-        "PlaybackBasePath": "https://f1tv-cdn-cent-east.formula1.com/live/50526040825",
-        "PlaybackUrl": "https://f1tv-cdn-cent-east.formula1.com/live/50526040825/master.m3u8",
+        "PlaybackBasePath": "https://f1tv-cdn-cent-east.formula1.com/live/wif0723105452",
+        "PlaybackUrl": "https://f1tv-cdn-cent-east.formula1.com/live/wif0723105452/master.m3u8",
         "CrossPublishPaths": [],
         "StreamPackageIndex": 0,
         "RedundantPublishing": true,
@@ -470,14 +470,14 @@
       },
       {
         "PublishPointId": "live2vod",
-        "Url": "http://pubpoint.vod.istreamplanet.com/event/3/2/50526040825/1",
-        "OriginalUrl": "http://pubpoint.vod.istreamplanet.com/event/3/2/50526040825/1",
-        "GeneratedBasePublishUrl": "http://pubpoint.vod.istreamplanet.com/event/3/2/50526040825/1",
+        "Url": "http://pubpoint.vod.istreamplanet.com/event/3/2/wif0723105452/1",
+        "OriginalUrl": "http://pubpoint.vod.istreamplanet.com/event/3/2/wif0723105452/1",
+        "GeneratedBasePublishUrl": "http://pubpoint.vod.istreamplanet.com/event/3/2/wif0723105452/1",
         "HttpAuth": "None",
         "UserName": "",
         "Password": "",
-        "PlaybackBasePath": "http://pubpoint.vod.istreamplanet.com/event/3/2/50526040825/1",
-        "PlaybackUrl": "http://pubpoint.vod.istreamplanet.com/event/3/2/50526040825/1/master.m3u8",
+        "PlaybackBasePath": "http://pubpoint.vod.istreamplanet.com/event/3/2/wif0723105452/1",
+        "PlaybackUrl": "http://pubpoint.vod.istreamplanet.com/event/3/2/wif0723105452/1/master.m3u8",
         "CrossPublishPaths": [],
         "StreamPackageIndex": 1,
         "RedundantPublishing": true,
@@ -504,8 +504,8 @@
   "IsPrimeTimeCustomer": true,
   "CollectTrace": false,
   "Status": "OffAir",
-  "Health": "Warning",
-  "LastStartTime": "2019-05-26T11:14:26.218Z",
+  "Health": "Critical",
+  "LastStartTime": "2019-07-23T17:55:11.493Z",
   "ServicesConfiguration": {
     "AudioTranscoder": {},
     "FragmentedMp4Capture": {},
@@ -533,15 +533,15 @@
       "Brokers": "10.5.39.17,10.5.40.29,10.5.41.20",
       "Topic": "prod.metrics",
       "Tags": {
-        "feed_name": "nbc_f1_obs_13_primary",
-        "aventus_channel_name": "ott-f1-13",
+        "feed_name": "nbc_f1_wif_01_primary",
+        "aventus_channel_name": "ott-f1-wif",
         "provider": "unknown",
         "distributor": "nbcf1",
         "environment": "prod",
         "region": "vegas",
         "source_origin": "cvr",
         "scale_unit_id": "las-157-166-151-41.istreamplanet.com",
-        "combined": "ott-f1-13/unknown/nbcf1/nbc_f1_obs_13_primary"
+        "combined": "ott-f1-wif/unknown/nbcf1/nbc_f1_wif_01_primary"
       }
     },
     "ChannelTimeline": {
@@ -551,11 +551,11 @@
   "SendEndOfCaptions": false,
   "Kill": false,
   "IsDeleted": false,
-  "Id": "329e35e2-089d-4471-abc5-55eb4d1c272d",
-  "ETag": "fe7918ca-8309-48bf-8327-8fdb47ed5ef0",
-  "Tag": "1f46ecf8-ec22-43e6-8d26-6b0530706657",
-  "CreatedTime": "2019-03-21T14:21:37.481Z",
-  "LastUpdateTime": "2019-05-26T15:22:09.047Z",
-  "TimeElapsedSince": "59.17:46:55.1181525",
+  "Id": "4b05f0ca-e2e7-42ce-9902-6ba55dd763c1",
+  "ETag": "58209047-f0fb-40cc-89a0-08d03543bb90",
+  "Tag": "b88fe67a-8a72-4610-9559-715f4370626d",
+  "CreatedTime": "2019-05-28T18:24:52.641Z",
+  "LastUpdateTime": "2019-07-24T03:01:29.398Z",
+  "TimeElapsedSince": "1.06:07:35.1431574",
   "Version": "7.9.30945.1"
 }

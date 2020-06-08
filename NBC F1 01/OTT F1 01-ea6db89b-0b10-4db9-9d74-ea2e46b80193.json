@@ -412,9 +412,9 @@
     "PublishingPoints": [
       {
         "PublishPointId": "f1tv-primary",
-        "Url": "http://f101@nbcsports.origin.istreamplanet.net/live/180718071141",
-        "OriginalUrl": "http://f101@nbcsports.origin.istreamplanet.net/live/180718071141",
-        "GeneratedBasePublishUrl": "http://f101@nbcsports.origin.istreamplanet.net/live/180718071141",
+        "Url": "http://f101@nbcu-west.nbc.origin.istreamplanet.net/live/180718071141",
+        "OriginalUrl": "http://f101@nbcu-west.nbc.origin.istreamplanet.net/live/180718071141",
+        "GeneratedBasePublishUrl": "http://f101@nbcu-west.nbc.origin.istreamplanet.net/live/180718071141",
         "HttpAuth": "None",
         "UserName": "",
         "Password": "",
@@ -441,9 +441,9 @@
       },
       {
         "PublishPointId": "f1tv-secondary",
-        "Url": "http://f101@nbcsports-east.origin.istreamplanet.net/live/180718071141",
-        "OriginalUrl": "http://f101@nbcsports-east.origin.istreamplanet.net/live/180718071141",
-        "GeneratedBasePublishUrl": "http://f101@nbcsports-east.origin.istreamplanet.net/live/180718071141",
+        "Url": "http://f101@nbcu-east.nbc.origin.istreamplanet.net/live/180718071141",
+        "OriginalUrl": "http://f101@nbcu-east.nbc.origin.istreamplanet.net/live/180718071141",
+        "GeneratedBasePublishUrl": "http://f101@nbcu-east.nbc.origin.istreamplanet.net/live/180718071141",
         "HttpAuth": "None",
         "UserName": "",
         "Password": "",

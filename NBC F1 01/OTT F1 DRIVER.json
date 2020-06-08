@@ -389,9 +389,9 @@
     "PublishingPoints": [
       {
         "PublishPointId": "f1tv-primary",
-        "Url": "http://f1driver@nbcsports.origin.istreamplanet.net/live/driver0718073856",
-        "OriginalUrl": "http://f1driver@nbcsports.origin.istreamplanet.net/live/driver0718073856",
-        "GeneratedBasePublishUrl": "http://f1driver@nbcsports.origin.istreamplanet.net/live/driver0718073856",
+        "Url": "http://f1driver@nbcu-west.nbc.origin.istreamplanet.net/live/driver0718073856",
+        "OriginalUrl": "http://f1driver@nbcu-west.nbc.origin.istreamplanet.net/live/driver0718073856",
+        "GeneratedBasePublishUrl": "http://f1driver@nbcu-west.nbc.origin.istreamplanet.net/live/driver0718073856",
         "HttpAuth": "None",
         "UserName": "",
         "Password": "",
@@ -418,9 +418,9 @@
       },
       {
         "PublishPointId": "f1tv-secondary",
-        "Url": "http://f1driver@nbcsports-east.origin.istreamplanet.net/live/driver0718073856",
-        "OriginalUrl": "http://f1driver@nbcsports-east.origin.istreamplanet.net/live/driver0718073856",
-        "GeneratedBasePublishUrl": "http://f1driver@nbcsports-east.origin.istreamplanet.net/live/driver0718073856",
+        "Url": "http://f1driver@nbcu-east.nbc.origin.istreamplanet.net/live/driver0718073856",
+        "OriginalUrl": "http://f1driver@nbcu-east.nbc.origin.istreamplanet.net/live/driver0718073856",
+        "GeneratedBasePublishUrl": "http://f1driver@nbcu-east.nbc.origin.istreamplanet.net/live/driver0718073856",
         "HttpAuth": "None",
         "UserName": "",
         "Password": "",
